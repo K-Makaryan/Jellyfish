@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { YoutubeMp3Component } from './pages/youtube-mp3/youtube-mp3.component';
 
 const routes: Routes = [
   {
+    path: '',
+    loadComponent: () => import('./pages/home/home.component')
+      .then(c => c.HomeComponent),
+  },
+  {
     path: 'youtube-mp3',
     loadComponent: () => import('./pages/youtube-mp3/youtube-mp3.component')
-      .then(c => c.YoutubeMp3Component)
+      .then(c => c.YoutubeMp3Component),
+  },
+  {
+    path: '**',
+    redirectTo: '',
   }
 ];
 
