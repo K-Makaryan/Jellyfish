@@ -16,6 +16,11 @@
     type="button"
     [disabled]="ytId.invalid || pending"
   >
-    Download
+    <span *ngIf="!pending; else loader">Download</span>
+    <ng-template #loader>
+      <span class="material-symbols-outlined">
+        progress_activity
+      </span>
+    </ng-template>
   </button>
 </form>
