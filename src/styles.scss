@@ -1,0 +1,72 @@
+:root {
+  --main-light-color: #66fcf1;
+  --main-dark-color: #45a29e;
+  --dark-color: #0b0c10;
+  --medium-color: #1f2833;
+  --light-color: #c5c6c7;
+  --white-color: #ffffff;
+  --error-color: #ff2a2a;
+}
+
+* {
+  color: #ffffff;
+  margin: unset;
+  padding: unset;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(var(--dark-color), var(--medium-color));
+}
+
+.header-1 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  input {
+    height: 44px;
+    width: 100%;
+    padding-inline: 22px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid var(--medium-color);
+    outline: unset;
+    transition: 0.2s ease;
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+
+    &.ng-invalid.ng-dirty {
+      border-bottom-color: var(--error-color);
+    }
+  }
+
+  span {
+    margin-inline: 20px;
+    color: var(--error-color);
+  }
+}
+
+button {
+  height: 44px;
+  padding-inline: 22px;
+  font-size: 16px;
+  color: var(--white-color);
+  background: transparent;
+  border: 1px solid var(--main-light-color);
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: unset;
+  }
+}

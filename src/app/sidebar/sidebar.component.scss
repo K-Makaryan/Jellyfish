@@ -1,0 +1,34 @@
+:host {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  height: 56px;
+  padding: 10px 20px;
+  overflow: hidden;
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+  }
+
+  .material-symbols-outlined {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .nav-icon {
+    gap: 10px;
+    color: var(--light-color);
+    transition: 0.2s ease-out;
+
+    &.active {
+      color: var(--main-light-color);
+    }
+  }
+}

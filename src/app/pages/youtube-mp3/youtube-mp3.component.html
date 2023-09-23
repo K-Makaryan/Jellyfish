@@ -1,0 +1,21 @@
+<form>
+  <h1 class="header-1">Youtube Video To MP3 Converter</h1>
+  <div class="input-wrapper">
+    <input [formControl]="ytId" placeholder="Pass video link" type="text" />
+    <span *ngIf="ytId.invalid && ytId.dirty">
+      {{
+        ytId.hasError("required")
+          ? "The field is required"
+          : "The link is Invalid"
+      }}
+    </span>
+  </div>
+  <button
+    data-tooltip="Size: 20Mb"
+    (click)="requestMp3()"
+    type="button"
+    [disabled]="ytId.invalid || pending"
+  >
+    Download
+  </button>
+</form>
