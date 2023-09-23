@@ -39,15 +39,20 @@ body {
   input {
     height: 44px;
     width: 100%;
-    padding-inline: 22px;
+    padding-inline: 16px;
     font-size: 16px;
     background-color: transparent;
     border: 1px solid var(--medium-color);
+    border-radius: 0;
     outline: unset;
     transition: 0.2s ease;
 
     &::placeholder {
       color: var(--light-color);
+    }
+
+    &:focus {
+      border-bottom-color: var(--light-color);
     }
 
     &.ng-invalid.ng-dirty {
@@ -56,7 +61,7 @@ body {
   }
 
   span {
-    margin-inline: 20px;
+    margin-inline: 17px;
     color: var(--error-color);
   }
 }
