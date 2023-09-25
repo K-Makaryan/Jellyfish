@@ -27,11 +27,8 @@ jobs:
       - name: Copy Index file
         run: cp _site/index.html _site/404.html
 
-      - name: Archive build output
-        run: tar -zcvf _site/github-pages.tar.gz _site/*
-
-      # - name: Upload Pages artifact
-      #   uses: actions/upload-pages-artifact@v2
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
 
   deploy:
     needs: build
