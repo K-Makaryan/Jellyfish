@@ -1,0 +1,11 @@
+<input 
+    [formControl]="parentFormControl" 
+    [placeholder]="placeholder" 
+    [type]="type" />
+<span *ngIf="parentFormControl.invalid && parentFormControl.dirty">
+  {{
+    parentFormControl.hasError("required")
+      ? "The field is required"
+      : errorMessage
+  }}
+</span>

@@ -17,7 +17,7 @@
 }
 
 body {
-  background: linear-gradient(var(--dark-color), var(--medium-color));
+  background: linear-gradient(var(--medium-color), var(--dark-color));
 }
 
 .header-1 {
@@ -31,41 +31,6 @@ body {
   color: var(--light-color);
 }
 
-.input-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  input {
-    height: 44px;
-    width: 100%;
-    padding-inline: 16px;
-    font-size: 16px;
-    background-color: transparent;
-    border: 1px solid var(--medium-color);
-    border-radius: 0;
-    outline: unset;
-    transition: 0.2s ease;
-
-    &::placeholder {
-      color: var(--light-color);
-    }
-
-    &:focus {
-      border-bottom-color: var(--light-color);
-    }
-
-    &.ng-invalid.ng-dirty {
-      border-bottom-color: var(--error-color);
-    }
-  }
-
-  span {
-    margin-inline: 17px;
-    color: var(--error-color);
-  }
-}
-
 button {
   height: 44px;
   padding-inline: 22px;
@@ -73,6 +38,7 @@ button {
   color: var(--white-color);
   background: transparent;
   border: 1px solid var(--main-light-color);
+  border-radius: 12px;
   transition: 0.2s ease;
   cursor: pointer;
 

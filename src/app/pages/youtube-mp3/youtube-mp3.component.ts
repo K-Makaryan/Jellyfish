@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 import { IYoutubeMp3Data } from '../../interfaces';
 import { CommonModule } from '@angular/common';
+import { UiKitModule } from 'src/app/shared/ui-kit/ui-kit.module';
 
 @Component({
   standalone: true,
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    UiKitModule,
   ]
 })
 export class YoutubeMp3Component {

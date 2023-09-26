@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  flex-direction: column; 
+  gap: 5px;
+  width: 100%;
+
+  input {
+    height: 44px;
+    width: 100%;
+    padding-inline: 16px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid var(--medium-color);
+    border-radius: 12px;
+    outline: unset;
+    transition: 0.2s ease;
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+
+    &:focus {
+      border-color: var(--light-color);
+    }
+
+    &.ng-invalid.ng-dirty {
+      border-color: var(--error-color);
+    }
+  }
+
+  span {
+    margin-inline: 17px;
+    color: var(--error-color);
+  }
+}
