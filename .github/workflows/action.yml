@@ -25,10 +25,12 @@ jobs:
         run: npm run build:prod
 
       - name: Copy Index file
-        run: cp _site/index.html _site/404.html
+        run: cp dist/Jellyfish/browser/index.html dist/Jellyfish/browser/404.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
+        with:
+          path: dist/Jellyfish/browser/
 
   deploy:
     needs: build
@@ -47,3 +49,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        
